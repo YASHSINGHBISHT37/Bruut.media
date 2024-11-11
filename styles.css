@@ -170,12 +170,17 @@ nav {
   border-radius: 1vh;
 }
 
-.herooage-bg-video {
+.heropage-bg-video {
   width: 100%;
-  height: 100vh;
-  object-fit: cover;
+  height: 100%;
   position: fixed;
   z-index: -1;
+}
+
+.heropage-bg-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .heropage {
@@ -249,7 +254,7 @@ nav {
 .pg1-case video {
   width: 54vh;
   height: 30vh;
-  border-radius: 2vh;
+  border-radius: 1vh;
   object-fit: cover;
 }
 
@@ -361,7 +366,7 @@ nav {
 }
 
 .page3-cont {
-  height: 200vh;
+  height: 188vh;
 }
 
 .page3 .pg3-button {
@@ -425,7 +430,6 @@ nav {
   margin-left: 23vh;
   margin-bottom: 7vh;
 }
-
 .pg3-upper h1 {
   font-size: 22.4vh;
   text-transform: uppercase;
@@ -437,7 +441,7 @@ nav {
   justify-content: flex-end;
   align-items: center;
   margin-top: -5vh;
-  padding: 0vh 18vh 12vh 18vh;
+  padding: 0vh 18vh 0vh 18vh;
 }
 
 .img-cont {
@@ -489,6 +493,46 @@ nav {
   font-size: 7.2vh;
   width: 30vh;
   z-index: 2;
+}
+
+.p3-items:hover h1 {
+  color: #fdc0bc;
+}
+
+.p3-items:hover h1::before {
+  content: "[";
+  color: #fdc0bc;
+  position: absolute;
+  left: 17vh;
+  animation: pg3-bracket-left 0.1s linear;
+}
+
+@keyframes pg3-bracket-left {
+  from {
+    transform: translate(-10px);
+  }
+}
+
+.p3-items:hover .item-1-h1::after {
+  content: "]";
+  color: #fdc0bc;
+  position: absolute;
+  left: 28vh;
+  animation: pg3-bracket-right 0.1s linear;
+}
+
+.p3-items:hover h1::after {
+  content: "]";
+  position: absolute;
+  left: 29vh;
+  color: #fdc0bc;
+  animation: pg3-bracket-right 0.1s linear;
+}
+
+@keyframes pg3-bracket-right {
+  from {
+    transform: translate(10px);
+  }
 }
 
 .p3-items h2 {
@@ -554,12 +598,12 @@ nav {
 }
 
 .page4 h1 span {
-  animation-range-start: cover 30vh;
-  animation-range-end: cover 40vh;
+  animation-range-start: cover 40vh;
+  animation-range-end: cover 50vh;
 }
 
 .page4 p span {
-  animation-range-start: cover 29vh;
+  animation-range-start: cover 39vh;
   animation-range-end: cover 70vh;
 }
 
@@ -711,11 +755,11 @@ footer h1:hover {
   background-image: url("images/footer-6.png");
   background-size: contain;
   background-repeat: no-repeat;
-  transition: background-image ease;
+  transition: background-image;
 }
 
 .footer-img-cont:hover .footer-imgs {
-  animation: changeimage 1.4s infinite;
+  animation: changeimage 1.7s infinite;
 }
 
 @keyframes changeimage {
